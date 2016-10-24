@@ -35,14 +35,14 @@
       }
     }
   },
-  "paths": {
+  "paths": [{
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}": {
       "delete": {
         "tags": [
           "ApplicationGateways"
         ],
         "operationId": "ApplicationGateways_Delete",
-        "description": "The delete ApplicationGateway operation deletes the specified application gateway.",
+        "description": "Deletes the specified application gateway.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -67,13 +67,13 @@
         ],
         "responses": {
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -83,7 +83,7 @@
           "ApplicationGateways"
         ],
         "operationId": "ApplicationGateways_Get",
-        "description": "The Get ApplicationGateway operation retrieves information about the specified application gateway.",
+        "description": "Gets the specified application gateway.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -108,7 +108,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ApplicationGateway"
             }
@@ -120,7 +120,7 @@
           "ApplicationGateways"
         ],
         "operationId": "ApplicationGateways_CreateOrUpdate",
-        "description": "The Put ApplicationGateway operation creates/updates a ApplicationGateway",
+        "description": "Creates or updates the specified application gateway.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -154,13 +154,13 @@
         ],
         "responses": {
           "201": {
-            "description": "",
+            "description": "Request successful. New resource has been created.",
             "schema": {
               "$ref": "#/definitions/ApplicationGateway"
             }
           },
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ApplicationGateway"
             }
@@ -175,7 +175,7 @@
           "ApplicationGateways"
         ],
         "operationId": "ApplicationGateways_List",
-        "description": "The List ApplicationGateway operation retrieves all the application gateways in a resource group.",
+        "description": "Lists all application gateways in a resource group.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -193,7 +193,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ApplicationGatewayListResult"
             }
@@ -210,7 +210,7 @@
           "ApplicationGateways"
         ],
         "operationId": "ApplicationGateways_ListAll",
-        "description": "The List ApplicationGateway operation retrieves all the application gateways in a subscription.",
+        "description": "Gets all the application gateways in a subscription.",
         "parameters": [
           {
             "$ref": "#/parameters/ApiVersionParameter"
@@ -221,7 +221,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ApplicationGatewayListResult"
             }
@@ -238,7 +238,7 @@
           "ApplicationGateways"
         ],
         "operationId": "ApplicationGateways_Start",
-        "description": "The Start ApplicationGateway operation starts application gateway in the specified resource group through Network resource provider.",
+        "description": "Starts the specified application gateway.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -263,10 +263,10 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -278,7 +278,7 @@
           "ApplicationGateways"
         ],
         "operationId": "ApplicationGateways_Stop",
-        "description": "The STOP ApplicationGateway operation stops application gateway in the specified resource group through Network resource provider.",
+        "description": "Stops the specified application gateway in the specified resource group.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -303,10 +303,10 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -318,7 +318,7 @@
           "ApplicationGateways"
         ],
         "operationId": "ApplicationGateways_BackendHealth",
-        "description": "The BackendHealth operation gets the backend health of application gateway in the specified resource group through Network resource provider.",
+        "description": "Gets the backend health of the specified application gateway in the specified resource group.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -368,7 +368,7 @@
           "ExpressRouteCircuitAuthorizations"
         ],
         "operationId": "ExpressRouteCircuitAuthorizations_Delete",
-        "description": "The delete authorization operation deletes the specified authorization from the specified ExpressRouteCircuit.",
+        "description": "Deletes the specified authorization from the specified ExpressRouteCircuit.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -400,13 +400,13 @@
         ],
         "responses": {
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "204": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -416,7 +416,7 @@
           "ExpressRouteCircuitAuthorizations"
         ],
         "operationId": "ExpressRouteCircuitAuthorizations_Get",
-        "description": "The GET authorization operation retrieves the specified authorization from the specified ExpressRouteCircuit.",
+        "description": "Gets the specified authorization from the specified ExpressRouteCircuit.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -448,7 +448,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitAuthorization"
             }
@@ -460,7 +460,7 @@
           "ExpressRouteCircuitAuthorizations"
         ],
         "operationId": "ExpressRouteCircuitAuthorizations_CreateOrUpdate",
-        "description": "The Put Authorization operation creates/updates an authorization in the specified ExpressRouteCircuits",
+        "description": "Creates or updates an authorization in the specified ExpressRouteCircuits",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -501,13 +501,13 @@
         ],
         "responses": {
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitAuthorization"
             }
           },
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitAuthorization"
             }
@@ -522,7 +522,7 @@
           "ExpressRouteCircuitAuthorizations"
         ],
         "operationId": "ExpressRouteCircuitAuthorizations_List",
-        "description": "The List authorization operation retrieves all the authorizations in an ExpressRouteCircuit.",
+        "description": "Gets all authorizations in an ExpressRouteCircuit.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -547,7 +547,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/AuthorizationListResult"
             }
@@ -564,7 +564,7 @@
           "ExpressRouteCircuitPeerings"
         ],
         "operationId": "ExpressRouteCircuitPeerings_Delete",
-        "description": "The delete peering operation deletes the specified peering from the ExpressRouteCircuit.",
+        "description": "Deletes the specified peering from the specified ExpressRouteCircuit.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -596,13 +596,13 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "204": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -612,7 +612,7 @@
           "ExpressRouteCircuitPeerings"
         ],
         "operationId": "ExpressRouteCircuitPeerings_Get",
-        "description": "The GET peering operation retrieves the specified authorization from the ExpressRouteCircuit.",
+        "description": "Gets the specified authorization from the specified ExpressRouteCircuit.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -644,7 +644,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitPeering"
             }
@@ -656,7 +656,7 @@
           "ExpressRouteCircuitPeerings"
         ],
         "operationId": "ExpressRouteCircuitPeerings_CreateOrUpdate",
-        "description": "The Put Peering operation creates/updates an peering in the specified ExpressRouteCircuits",
+        "description": "Creates or updates a peering in the specified ExpressRouteCircuits",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -697,13 +697,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitPeering"
             }
           },
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitPeering"
             }
@@ -718,7 +718,7 @@
           "ExpressRouteCircuitPeerings"
         ],
         "operationId": "ExpressRouteCircuitPeerings_List",
-        "description": "The List peering operation retrieves all the peerings in an ExpressRouteCircuit.",
+        "description": "Gets all peerings in a specified ExpressRouteCircuit.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -743,7 +743,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitPeeringListResult"
             }
@@ -760,7 +760,7 @@
           "ExpressRouteCircuits"
         ],
         "operationId": "ExpressRouteCircuits_Delete",
-        "description": "The delete ExpressRouteCircuit operation deletes the specified ExpressRouteCircuit.",
+        "description": "Deletes the specified ExpressRouteCircuit.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -785,13 +785,13 @@
         ],
         "responses": {
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -801,7 +801,7 @@
           "ExpressRouteCircuits"
         ],
         "operationId": "ExpressRouteCircuits_Get",
-        "description": "The Get ExpressRouteCircuit operation retrieves information about the specified ExpressRouteCircuit.",
+        "description": "Gets information about the specified ExpressRouteCircuit.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -826,7 +826,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuit"
             }
@@ -838,7 +838,7 @@
           "ExpressRouteCircuits"
         ],
         "operationId": "ExpressRouteCircuits_CreateOrUpdate",
-        "description": "The Put ExpressRouteCircuit operation creates/updates a ExpressRouteCircuit",
+        "description": "Creates or updates a ExpressRouteCircuit",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -872,13 +872,13 @@
         ],
         "responses": {
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuit"
             }
           },
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuit"
             }
@@ -893,7 +893,7 @@
           "ExpressRouteCircuitArpTable"
         ],
         "operationId": "ExpressRouteCircuits_ListArpTable",
-        "description": "The ListArpTable from ExpressRouteCircuit operation retrieves the currently advertised arp table associated with the ExpressRouteCircuits in a resource group.",
+        "description": "Gets the currently advertised arp table associated with the ExpressRouteCircuits in a resource group.",
         "parameters": [
           {
             "name": "resourceGroupName",
@@ -932,13 +932,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitsArpTableListResult"
             }
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -989,13 +989,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitsRoutesTableListResult"
             }
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -1046,13 +1046,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitsRoutesTableSummaryListResult"
             }
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -1089,7 +1089,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitStats"
             }
@@ -1135,7 +1135,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitStats"
             }
@@ -1167,7 +1167,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitListResult"
             }
@@ -1195,7 +1195,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteCircuitListResult"
             }
@@ -1223,7 +1223,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ExpressRouteServiceProviderListResult"
             }
@@ -1265,13 +1265,13 @@
         ],
         "responses": {
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -1313,7 +1313,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/LoadBalancer"
             }
@@ -1359,13 +1359,13 @@
         ],
         "responses": {
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/LoadBalancer"
             }
           },
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/LoadBalancer"
             }
@@ -1391,7 +1391,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/LoadBalancerListResult"
             }
@@ -1426,7 +1426,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/LoadBalancerListResult"
             }
@@ -1477,13 +1477,13 @@
         ],
         "responses": {
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/LocalNetworkGateway"
             }
           },
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/LocalNetworkGateway"
             }
@@ -1521,7 +1521,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/LocalNetworkGateway"
             }
@@ -1558,13 +1558,13 @@
         ],
         "responses": {
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -1594,7 +1594,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/LocalNetworkGatewayListResult"
             }
@@ -1636,13 +1636,13 @@
         ],
         "responses": {
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -1684,7 +1684,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkInterface"
             }
@@ -1730,13 +1730,13 @@
         ],
         "responses": {
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/NetworkInterface"
             }
           },
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkInterface"
             }
@@ -1783,7 +1783,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkInterfaceListResult"
             }
@@ -1825,7 +1825,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkInterfaceListResult"
             }
@@ -1888,7 +1888,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkInterface"
             }
@@ -1913,7 +1913,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkInterfaceListResult"
             }
@@ -1948,7 +1948,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkInterfaceListResult"
             }
@@ -1990,13 +1990,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/EffectiveRouteListResult"
             }
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -2033,13 +2033,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/EffectiveNetworkSecurityGroupListResult"
             }
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -2076,13 +2076,13 @@
         ],
         "responses": {
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "204": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -2124,7 +2124,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkSecurityGroup"
             }
@@ -2170,13 +2170,13 @@
         ],
         "responses": {
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/NetworkSecurityGroup"
             }
           },
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkSecurityGroup"
             }
@@ -2202,7 +2202,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkSecurityGroupListResult"
             }
@@ -2237,7 +2237,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/NetworkSecurityGroupListResult"
             }
@@ -2279,13 +2279,13 @@
         ],
         "responses": {
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -2327,7 +2327,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/PublicIPAddress"
             }
@@ -2373,13 +2373,13 @@
         ],
         "responses": {
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/PublicIPAddress"
             }
           },
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/PublicIPAddress"
             }
@@ -2405,7 +2405,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/PublicIPAddressListResult"
             }
@@ -2440,7 +2440,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/PublicIPAddressListResult"
             }
@@ -2482,13 +2482,13 @@
         ],
         "responses": {
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -2530,7 +2530,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/RouteTable"
             }
@@ -2576,13 +2576,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/RouteTable"
             }
           },
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/RouteTable"
             }
@@ -2615,7 +2615,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/RouteTableListResult"
             }
@@ -2643,7 +2643,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/RouteTableListResult"
             }
@@ -2692,13 +2692,13 @@
         ],
         "responses": {
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "204": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -2740,7 +2740,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/Route"
             }
@@ -2793,13 +2793,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/Route"
             }
           },
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/Route"
             }
@@ -2839,7 +2839,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/RouteListResult"
             }
@@ -2888,13 +2888,13 @@
         ],
         "responses": {
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -2936,7 +2936,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/SecurityRule"
             }
@@ -2989,13 +2989,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/SecurityRule"
             }
           },
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/SecurityRule"
             }
@@ -3035,7 +3035,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/SecurityRuleListResult"
             }
@@ -3084,13 +3084,13 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -3139,7 +3139,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/Subnet"
             }
@@ -3192,13 +3192,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/Subnet"
             }
           },
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/Subnet"
             }
@@ -3238,7 +3238,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/SubnetListResult"
             }
@@ -3287,13 +3287,13 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -3335,7 +3335,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkPeering"
             }
@@ -3388,13 +3388,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkPeering"
             }
           },
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkPeering"
             }
@@ -3434,7 +3434,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkPeeringListResult"
             }
@@ -3470,7 +3470,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/UsagesListResult"
             }
@@ -3521,13 +3521,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkGatewayConnection"
             }
           },
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkGatewayConnection"
             }
@@ -3565,7 +3565,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkGatewayConnection"
             }
@@ -3602,13 +3602,13 @@
         ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "204": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -3645,7 +3645,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ConnectionSharedKeyResult"
             }
@@ -3677,7 +3677,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkGatewayConnectionListResult"
             }
@@ -3728,13 +3728,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ConnectionResetSharedKey"
             }
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -3780,13 +3780,13 @@
         ],
         "responses": {
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/ConnectionSharedKey"
             }
           },
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/ConnectionSharedKey"
             }
@@ -3835,13 +3835,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkGateway"
             }
           },
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkGateway"
             }
@@ -3879,7 +3879,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkGateway"
             }
@@ -3916,13 +3916,13 @@
         ],
         "responses": {
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -3952,7 +3952,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkGatewayListResult"
             }
@@ -4003,10 +4003,10 @@
         ],
         "responses": {
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkGateway"
             }
@@ -4094,13 +4094,13 @@
         ],
         "responses": {
           "202": {
-            "description": ""
+            "description": "Request Accepted. Query returned operation for status."
           },
           "204": {
-            "description": ""
+            "description": "Request successful."
           },
           "200": {
-            "description": ""
+            "description": "Request successful."
           }
         },
         "x-ms-long-running-operation": true
@@ -4142,7 +4142,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetwork"
             }
@@ -4188,13 +4188,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetwork"
             }
           },
           "201": {
-            "description": "",
+            "description": "Request Successful. Resource has been created or updated.",
             "schema": {
               "$ref": "#/definitions/VirtualNetwork"
             }
@@ -4220,7 +4220,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkListResult"
             }
@@ -4255,7 +4255,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/VirtualNetworkListResult"
             }
@@ -4294,7 +4294,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Request successful.",
             "schema": {
               "$ref": "#/definitions/DnsNameAvailabilityResult"
             }
@@ -4345,7 +4345,7 @@
         }
       }
     }
-  },
+  }],
   "definitions": {
     "ApplicationGatewayBackendHealth": {
       "properties": {
@@ -7515,7 +7515,7 @@
         },
         "allowGatewayTransit": {
           "type": "boolean",
-          "description": "Gets or sets if gatewayLinks can be used in remote virtual network’s link to this virtual network"
+          "description": "Gets or sets if gatewayLinks can be used in remote virtual networkï¿½s link to this virtual network"
         },
         "useRemoteGateways": {
           "type": "boolean",
