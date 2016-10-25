@@ -4369,7 +4369,7 @@
           "items": {
             "$ref": "#/definitions/ApplicationGatewayBackendHealthHttpSettings"
           },
-        "description": "List of application gateway backendhealth http settings."
+        "description": "List of application gateway backend health http settings."
         }
       },
       "description": "Application gateway backendhealth pool."
@@ -4385,10 +4385,10 @@
           "items": {
             "$ref": "#/definitions/ApplicationGatewayBackendHealthServer"
         },
-        "description": "List of application gateway backendhealth servers."
+        "description": "List of application gateway backend health servers."
         }
       },
-      "description": "Application gateway backendhealth http settings."
+      "description": "Application gateway backend health http settings."
     },	
     "ApplicationGatewayBackendHealthServer": {
       "properties": {
@@ -4415,7 +4415,7 @@
           }
         }
       },	
-      "description": "Application gateway backendhealth http settings."
+      "description": "Application gateway backend health http settings."
     },  
     "ApplicationGatewaySku": {
       "properties": {
@@ -4473,20 +4473,20 @@
           }
         }
       },
-      "description": "Application gateway SSL policy"
+      "description": "Application gateway SSL policy."
     },
     "ApplicationGatewayIPConfigurationPropertiesFormat": {
       "properties": {
         "subnet": {
           "$ref": "#/definitions/SubResource",
-          "description": "Reference of the subnet resource. A subnet from where application gateway gets its private address "
+          "description": "Reference of the subnet resource. A subnet from where application gateway gets its private address."
         },
         "provisioningState": {
           "type": "string",
           "description": "Provisioning state of the application gateway subnet resource. Possible values: Updating, Deleting, Failed."
         }
       },
-      "description": "Properties of IP configuration of application gateway"
+      "description": "Properties of IP configuration of application gateway."
     },
     "ApplicationGatewayIPConfiguration": {
       "properties": {
@@ -4496,11 +4496,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -4782,14 +4782,14 @@
           "items": {
             "$ref": "#/definitions/SubResource"
           },
-          "description": "Array of references to Application Gateway Authentication Certificates."
+          "description": "Array of references to application gateway authentication certificates."
         },
         "provisioningState": {
           "type": "string",
           "description": "Provisioning state of the backend http settings resource. Possible values: Updating, Deleting, or Failed."
         }
       },
-      "description": "Properties of Backend address pool settings of application gateway."
+      "description": "Properties of backend address pool settings of application gateway."
     },
     "ApplicationGatewayBackendHttpSettings": {
       "properties": {
@@ -5155,11 +5155,11 @@
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Resource guid property of the ApplicationGateway resource."
+          "description": "Resource guid property of the application gateway resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the ApplicationGateway resource. Possible values: Updating, Deleting, or Failed."
+          "description": "Provisioning state of the application gateway resource. Possible values: Updating, Deleting, or Failed."
         }
       },
       "description": "Properties of Application Gateway"
@@ -5242,13 +5242,13 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "UrlPathMap of application gateway"
+      "description": "Url path map of application gateway."
     },
     "ApplicationGatewayWebApplicationFirewallConfiguration": {
       "properties": {
         "enabled": {
           "type": "boolean",
-          "description": "Whether web application firewall is enabled"
+          "description": "Whether web application firewall is enabled."
         },
         "firewallMode": {
           "type": "string",
@@ -5272,11 +5272,11 @@
       "properties": {
         "authorizationKey": {
           "type": "string",
-          "description": "Gets or sets the authorization key"
+          "description": "Gets or sets the authorization key."
         },
         "authorizationUseStatus": {
           "type": "string",
-          "description": "Gets or sets AuthorizationUseStatus. Possible values: Available, or InUse.",
+          "description": "Gets or sets authorization use status. Possible values: Available, or InUse.",
           "enum": [
             "Available",
             "InUse"
@@ -5288,7 +5288,7 @@
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource. Possible values: Updating, Deleting, or Failed."
+          "description": "Gets provisioning state of the public IP resource. Possible values: Updating, Deleting, or Failed."
         }
       }
     },
@@ -5300,11 +5300,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -5312,7 +5312,7 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Authorization in a ExpressRouteCircuit resource"
+      "description": "Authorization in a express route circuit resource."
     },
     "AuthorizationListResult": {
       "properties": {
@@ -5321,14 +5321,14 @@
           "items": {
             "$ref": "#/definitions/ExpressRouteCircuitAuthorization"
           },
-          "description": "Gets the authorizations in an ExpressRoute Circuit"
+          "description": "Gets the authorizations in an express route circuit."
         },
         "nextLink": {
           "type": "string",
           "description": "Gets the URL to get the next set of results."
         }
       },
-      "description": "Response for ListAuthorizations Api service callRetrieves all authorizations that belongs to an ExpressRouteCircuit"
+      "description": "Response for ListAuthorizations API service call. Retrieves all authorizations that belongs to an express route circuit."
     },
     "ExpressRouteCircuitPeeringConfig": {
       "properties": {
@@ -5337,7 +5337,7 @@
           "items": {
             "type": "string"
           },
-          "description": "Gets or sets the reference of AdvertisedPublicPrefixes"
+          "description": "Gets or sets the reference of advertised public prefixes."
         },
         "advertisedPublicPrefixesState": {
           "type": "string",
@@ -5356,45 +5356,45 @@
         "customerASN": {
           "type": "integer",
           "format": "int32",
-          "description": "Gets or Sets CustomerAsn of the peering."
+          "description": "Gets or sets customer ASN of the peering."
         },
         "routingRegistryName": {
           "type": "string",
-          "description": "Gets or Sets RoutingRegistryName of the config."
+          "description": "Gets or sets routing registry name of the config."
         }
       },
-      "description": "Specifies the peering config"
+      "description": "Specifies the peering config."
     },
     "ExpressRouteCircuitStats": {
       "properties": {
         "primarybytesIn": {
           "type": "integer",
           "format": "int64",
-          "description": "Gets BytesIn of the peering."
+          "description": "Gets bytes in of the peering."
         },
         "primarybytesOut": {
           "type": "integer",
           "format": "int64",
-          "description": "Gets BytesOut of the peering."
+          "description": "Gets bytes out of the peering."
         },
         "secondarybytesIn": {
           "type": "integer",
           "format": "int64",
-          "description": "Gets BytesIn of the peering."
+          "description": "Gets bytes in of the peering."
         },
         "secondarybytesOut": {
           "type": "integer",
           "format": "int64",
-          "description": "Gets BytesOut of the peering."
+          "description": "Gets bytes out of the peering."
         }
       },
-      "description": "Contains Stats associated with the peering"
+      "description": "Contains stats associated with the peering"
     },
     "ExpressRouteCircuitPeeringPropertiesFormat": {
       "properties": {
         "peeringType": {
           "type": "string",
-          "description": "Gets or sets PeeringType. Possible values: AzurePublicPeering, AzurePrivatePeering, or MicrosoftPeering.",
+          "description": "Gets or sets peering type. Possible values: AzurePublicPeering, AzurePrivatePeering, or MicrosoftPeering.",
           "enum": [
             "AzurePublicPeering",
             "AzurePrivatePeering",
@@ -5407,7 +5407,7 @@
         },
         "state": {
           "type": "string",
-          "description": "Gets or sets state of Peering",
+          "description": "Gets or sets state of peering.",
           "enum": [
             "Disabled",
             "Enabled"
@@ -5420,57 +5420,57 @@
         "azureASN": {
           "type": "integer",
           "format": "int32",
-          "description": "Gets or sets the azure ASN"
+          "description": "Gets or sets the azure ASN."
         },
         "peerASN": {
           "type": "integer",
           "format": "int32",
-          "description": "Gets or sets the peer ASN"
+          "description": "Gets or sets the peer ASN."
         },
         "primaryPeerAddressPrefix": {
           "type": "string",
-          "description": "Gets or sets the primary address prefix"
+          "description": "Gets or sets the primary address prefix."
         },
         "secondaryPeerAddressPrefix": {
           "type": "string",
-          "description": "Gets or sets the secondary address prefix"
+          "description": "Gets or sets the secondary address prefix."
         },
         "primaryAzurePort": {
           "type": "string",
-          "description": "Gets or sets the primary port"
+          "description": "Gets or sets the primary port."
         },
         "secondaryAzurePort": {
           "type": "string",
-          "description": "Gets or sets the secondary port"
+          "description": "Gets or sets the secondary port."
         },
         "sharedKey": {
           "type": "string",
-          "description": "Gets or sets the shared key"
+          "description": "Gets or sets the shared key."
         },
         "vlanId": {
           "type": "integer",
           "format": "int32",
-          "description": "Gets or sets the vlan id"
+          "description": "Gets or sets the VLAN id."
         },
         "microsoftPeeringConfig": {
           "$ref": "#/definitions/ExpressRouteCircuitPeeringConfig",
-          "description": "Gets or sets the mircosoft peering config"
+          "description": "Gets or sets the Mircosoft peering config."
         },
         "stats": {
           "$ref": "#/definitions/ExpressRouteCircuitStats",
-          "description": "Gets or peering stats"
+          "description": "Gets or sets peering stats."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets provisioning state of the PublicIP resource. Possible values: Updating, Deleting, or Failed."
         },
         "gatewayManagerEtag": {
           "type": "string",
-          "description": "Gets or sets the GatewayManager Etag"
+          "description": "Gets or sets the gateway manager Etag."
         },
         "lastModifiedBy": {
           "type": "string",
-          "description": "Gets whether the provider or the customer last modified the peering"
+          "description": "Gets whether the provider or the customer last modified the peering."
         }
       }
     },
@@ -5482,11 +5482,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -5494,7 +5494,7 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Peering in a ExpressRouteCircuit resource"
+      "description": "Peering in a express route circuit resource."
     },
     "ExpressRouteCircuitPeeringListResult": {
       "properties": {
@@ -5503,24 +5503,24 @@
           "items": {
             "$ref": "#/definitions/ExpressRouteCircuitPeering"
           },
-          "description": "Gets the peerings in an express route circuit"
+          "description": "Gets the peerings in an express route circuit."
         },
         "nextLink": {
           "type": "string",
           "description": "Gets the URL to get the next set of results."
         }
       },
-      "description": "Response for ListPeering Api service callRetrieves all Peerings that belongs to an ExpressRouteCircuit"
+      "description": "Response for list peering API service call. Retrieves all peerings that belongs to an express route circuit."
     },
     "ExpressRouteCircuitSku": {
       "properties": {
         "name": {
           "type": "string",
-          "description": "Gets or sets name of the sku."
+          "description": "Gets or sets name of the SKU."
         },
         "tier": {
           "type": "string",
-          "description": "Gets or sets tier of the sku.",
+          "description": "Gets or sets tier of the SKU. Possible values: Standar, or Premium.",
           "enum": [
             "Standard",
             "Premium"
@@ -5532,7 +5532,7 @@
         },
         "family": {
           "type": "string",
-          "description": "Gets or sets family of the sku.",
+          "description": "Gets or sets family of the SKU.",
           "enum": [
             "UnlimitedData",
             "MeteredData"
@@ -5543,13 +5543,13 @@
           }
         }
       },
-      "description": "Contains sku in an ExpressRouteCircuit"
+      "description": "Contains SKU in an express route circuit"
     },
     "ExpressRouteCircuitServiceProviderProperties": {
       "properties": {
         "serviceProviderName": {
           "type": "string",
-          "description": "Gets or sets serviceProviderName."
+          "description": "Gets or sets service provider name."
         },
         "peeringLocation": {
           "type": "string",
@@ -5558,24 +5558,24 @@
         "bandwidthInMbps": {
           "type": "integer",
           "format": "int32",
-          "description": "Gets or sets BandwidthInMbps."
+          "description": "Gets or sets bandwidth in Mbps."
         }
       },
-      "description": "Contains ServiceProviderProperties in an ExpressRouteCircuit"
+      "description": "Contains service provider properties in an express route circuit."
     },
     "ExpressRouteCircuitPropertiesFormat": {
       "properties": {
         "allowClassicOperations": {
           "type": "boolean",
-          "description": "allow classic operations"
+          "description": "Allow classic operations."
         },
         "circuitProvisioningState": {
           "type": "string",
-          "description": "Gets or sets CircuitProvisioningState state of the resource "
+          "description": "Gets or sets circuit provisioning state of the resource."
         },
         "serviceProviderProvisioningState": {
           "type": "string",
-          "description": "Gets or sets ServiceProviderProvisioningState state of the resource ",
+          "description": "Gets or sets service provider provisioning state of the resource. Possible values: NotProvisioned, Provisioning, Provisioned, or Deprovisioning.",
           "enum": [
             "NotProvisioned",
             "Provisioning",
@@ -5592,43 +5592,43 @@
           "items": {
             "$ref": "#/definitions/ExpressRouteCircuitAuthorization"
           },
-          "description": "Gets or sets list of authorizations"
+          "description": "Gets or sets list of authorizations."
         },
         "peerings": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ExpressRouteCircuitPeering"
           },
-          "description": "Gets or sets list of peerings"
+          "description": "Gets or sets list of peerings."
         },
         "serviceKey": {
           "type": "string",
-          "description": "Gets or sets ServiceKey"
+          "description": "Gets or sets service key."
         },
         "serviceProviderNotes": {
           "type": "string",
-          "description": "Gets or sets ServiceProviderNotes"
+          "description": "Gets or sets service provider notes."
         },
         "serviceProviderProperties": {
           "$ref": "#/definitions/ExpressRouteCircuitServiceProviderProperties",
-          "description": "Gets or sets ServiceProviderProperties"
+          "description": "Gets or sets service provider properties."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets provisioning state of the public IP resource. Possible values: Updating, Deleting, or Failed."
         },
         "gatewayManagerEtag": {
           "type": "string",
-          "description": "Gets or sets the GatewayManager Etag"
+          "description": "Gets or sets the gateway manager Etag."
         }
       },
-      "description": "Properties of ExpressRouteCircuit"
+      "description": "Properties of express route circuit."
     },
     "ExpressRouteCircuit": {
       "properties": {
         "sku": {
           "$ref": "#/definitions/ExpressRouteCircuitSku",
-          "description": "Gets or sets sku"
+          "description": "Gets or sets the SKU."
         },
         "properties": {
           "x-ms-client-flatten": true,
@@ -5636,7 +5636,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -5659,14 +5659,14 @@
         },
         "ipAddress": {
           "type": "string",
-          "description": "Gets ipAddress."
+          "description": "Gets IP address."
         },
         "macAddress": {
           "type": "string",
-          "description": "Gets macAddress."
+          "description": "Gets MAC address."
         }
       },
-      "description": "The arp table associated with the ExpressRouteCircuit"
+      "description": "The ARP table associated with the express route circuit."
     },
     "ExpressRouteCircuitsArpTableListResult": {
       "properties": {
