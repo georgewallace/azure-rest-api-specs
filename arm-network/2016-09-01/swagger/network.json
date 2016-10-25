@@ -4421,7 +4421,7 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "Name of application gateway SKU",
+          "description": "Name of application gateway SKU. Possible values: Standard_Small, Standard_Medium, Standard_Large, WAF_Medium, or WAF_Large.",
           "enum": [
             "Standard_Small",
             "Standard_Medium",
@@ -4436,7 +4436,7 @@
         },
         "tier": {
           "type": "string",
-          "description": "Tier of application gateway",
+          "description": "Tier of application gateway. Possible values: Standard, and WAF.",
           "enum": [
             "Standard",
             "WAF"
@@ -4449,7 +4449,7 @@
         "capacity": {
           "type": "integer",
           "format": "int32",
-          "description": "Capacity (instance count) of application gateway"
+          "description": "Specifies instance count. Can be 1 to 10."
         }
       },
       "description": "SKU of application gateway"
@@ -4458,7 +4458,7 @@
       "properties": {
         "disabledSslProtocols": {
           "type": "array",
-          "description": "SSL protocols to be disabled on Application Gateway",
+          "description": "SSL protocols to be disabled on Application Gateway. Possible values: TLSv1_0, TLSv1_1, or TLSv1_2.",
           "items": {
             "type": "string",
             "enum": [
@@ -4483,7 +4483,7 @@
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the application gateway subnet resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the application gateway subnet resource. Possible values: Updating, Deleting, Failed."
         }
       },
       "description": "Properties of IP configuration of application gateway"
@@ -4549,22 +4549,22 @@
       "properties": {
         "data": {
           "type": "string",
-          "description": "SSL Certificate data "
+          "description": "Base-64 encoded pfx certificate. Only applicable in PUT Request."
         },
         "password": {
           "type": "string",
-          "description": "SSL Certificate password "
+          "description": "Password for the pfx file specified in data. Only applicable in PUT request."
         },
         "publicCertData": {
           "type": "string",
-          "description": "SSL Certificate public data "
+          "description": "Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the ssl certificate resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the ssl certificate resource Possible values: Updating, Deleting, or Failed."
         }
       },
-      "description": "Properties of SSL certificates of application gateway"
+      "description": "Properties of SSL certificates of application gateway."
     },
     "ApplicationGatewaySslCertificate": {
       "properties": {
@@ -4574,11 +4574,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -4586,17 +4586,17 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "SSL certificates of application gateway"
+      "description": "SSL certificates of application gateway."
     },
     "ApplicationGatewayFrontendIPConfigurationPropertiesFormat": {
       "properties": {
         "privateIPAddress": {
           "type": "string",
-          "description": "PrivateIPAddress of the Network Interface IP Configuration"
+          "description": "Private IP address of the network interface IP Configuration."
         },
         "privateIPAllocationMethod": {
           "type": "string",
-          "description": "PrivateIP allocation method (Static/Dynamic)",
+          "description": "PrivateIP allocation method. Possible values: Static, or Dynamic.",
           "enum": [
             "Static",
             "Dynamic"
@@ -4608,18 +4608,18 @@
         },
         "subnet": {
           "$ref": "#/definitions/SubResource",
-          "description": "Reference of the subnet resource"
+          "description": "Reference of the subnet resource."
         },
         "publicIPAddress": {
           "$ref": "#/definitions/SubResource",
-          "description": "Reference of the PublicIP resource"
+          "description": "Reference of the public IP resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the PublicIP resource. Possible values: Updating, Deleting, or Failed."
         }
       },
-      "description": "Properties of Frontend IP configuration of application gateway"
+      "description": "Properties of Frontend IP configuration of application gateway."
     },
     "ApplicationGatewayFrontendIPConfiguration": {
       "properties": {
@@ -4629,11 +4629,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -4641,21 +4641,21 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Frontend IP configuration of application gateway"
+      "description": "Frontend IP configuration of application gateway."
     },
     "ApplicationGatewayFrontendPortPropertiesFormat": {
       "properties": {
         "port": {
           "type": "integer",
           "format": "int32",
-          "description": "Frontend port"
+          "description": "Frontend port."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the frontend port resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the frontend port resource. Possible values: Updating, Deleting, or Failed."
         }
       },
-      "description": "Properties of Frontend Port of application gateway"
+      "description": "Properties of frontend port of application gateway."
     },
     "ApplicationGatewayFrontendPort": {
       "properties": {
@@ -4665,11 +4665,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -4677,20 +4677,20 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Frontend Port of application gateway"
+      "description": "Frontend port of application gateway."
     },
     "ApplicationGatewayBackendAddress": {
       "properties": {
         "fqdn": {
           "type": "string",
-          "description": "Dns name"
+          "description": "DNS name."
         },
         "ipAddress": {
           "type": "string",
-          "description": "Ip address"
+          "description": "IP address."
         }
       },
-      "description": "Backend Address of application gateway"
+      "description": "Backend address of application gateway."
     },
     "ApplicationGatewayBackendAddressPoolPropertiesFormat": {
       "properties": {
@@ -4699,21 +4699,21 @@
           "items": {
             "$ref": "#/definitions/NetworkInterfaceIPConfiguration"
           },
-          "description": "Collection of references to IPs defined in NICs"
+          "description": "Collection of references to IPs defined in NICs."
         },
         "backendAddresses": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayBackendAddress"
           },
-          "description": "Backend addresses"
+          "description": "Backend addresses."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the backend address pool resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the backend address pool resource. Possible values: Updating, Deleting, or Failed."
         }
       },
-      "description": "Properties of Backend Address Pool of application gateway"
+      "description": "Properties of Backend Address Pool of application gateway."
     },
     "ApplicationGatewayBackendAddressPool": {
       "properties": {
@@ -4723,11 +4723,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -4735,7 +4735,7 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Backend Address Pool of application gateway"
+      "description": "Backend address pool of application gateway."
     },
     "ApplicationGatewayBackendHttpSettingsPropertiesFormat": {
       "properties": {
@@ -4746,7 +4746,7 @@
         },
         "protocol": {
           "type": "string",
-          "description": "Protocol",
+          "description": "Protocol. Possible values: Http, or Https.",
           "enum": [
             "Http",
             "Https"
@@ -4758,7 +4758,7 @@
         },
         "cookieBasedAffinity": {
           "type": "string",
-          "description": "Cookie affinity",
+          "description": "Cookie affinity. Possible values: Enabled, or Disabled.",
           "enum": [
             "Enabled",
             "Disabled"
@@ -4771,25 +4771,25 @@
         "requestTimeout": {
           "type": "integer",
           "format": "int32",
-          "description": "Request timeout"
+          "description": "Request timeout."
         },
         "probe": {
           "$ref": "#/definitions/SubResource",
-          "description": "Probe resource of application gateway "
+          "description": "Probe resource of application gateway."
         },
         "authenticationCertificates": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/SubResource"
           },
-          "description": "Array of references to Application Gateway Authentication Certificates"
+          "description": "Array of references to Application Gateway Authentication Certificates."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the backend http settings resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the backend http settings resource. Possible values: Updating, Deleting, or Failed."
         }
       },
-      "description": "Properties of Backend address pool settings of application gateway"
+      "description": "Properties of Backend address pool settings of application gateway."
     },
     "ApplicationGatewayBackendHttpSettings": {
       "properties": {
@@ -4799,11 +4799,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -4811,21 +4811,21 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Backend address pool settings of application gateway"
+      "description": "Backend address pool settings of application gateway."
     },
     "ApplicationGatewayHttpListenerPropertiesFormat": {
       "properties": {
         "frontendIPConfiguration": {
           "$ref": "#/definitions/SubResource",
-          "description": "Frontend IP configuration resource of application gateway "
+          "description": "Frontend IP configuration resource of application gateway."
         },
         "frontendPort": {
           "$ref": "#/definitions/SubResource",
-          "description": "Frontend port resource of application gateway "
+          "description": "Frontend port resource of application gateway."
         },
         "protocol": {
           "type": "string",
-          "description": "Protocol",
+          "description": "Protocol. Possible values: Http, or Https.",
           "enum": [
             "Http",
             "Https"
@@ -4837,22 +4837,22 @@
         },
         "hostName": {
           "type": "string",
-          "description": "Host name of http listener "
+          "description": "Host name of HTTP listener."
         },
         "sslCertificate": {
           "$ref": "#/definitions/SubResource",
-          "description": "Ssl certificate resource of application gateway "
+          "description": "SSL certificate resource of application gateway."
         },
         "requireServerNameIndication": {
           "type": "boolean",
-          "description": "RequireServerNameIndication of http listener "
+          "description": "RequireServerNameIndication of HTTP listener."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the http listener resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the HTTP listener resource. Possible values: Updating, Deleting, Failed."
         }
       },
-      "description": "Properties of Http listener of application gateway"
+      "description": "Properties of HTTP listener of application gateway."
     },
     "ApplicationGatewayHttpListener": {
       "properties": {
@@ -4862,11 +4862,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -4874,7 +4874,7 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Http listener of application gateway"
+      "description": "HTTP listener of application gateway."
     },
     "ApplicationGatewayPathRulePropertiesFormat": {
       "properties": {
@@ -4883,22 +4883,22 @@
           "items": {
             "type": "string"
           },
-          "description": "Path rules of URL path map"
+          "description": "Path rules of URL path map."
         },
         "backendAddressPool": {
           "$ref": "#/definitions/SubResource",
-          "description": "Backend address pool resource of URL path map "
+          "description": "Backend address pool resource of URL path map."
         },
         "backendHttpSettings": {
           "$ref": "#/definitions/SubResource",
-          "description": "Backend http settings resource of URL path map "
+          "description": "Backend http settings resource of URL path map."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Path rule of URL path map resource Updating/Deleting/Failed"
+          "description": "Path rule of URL path map resource. Possible values: Updating, Deleting, Failed."
         }
       },
-      "description": "Properties of probe of application gateway"
+      "description": "Properties of probe of application gateway."
     },
     "ApplicationGatewayPathRule": {
       "properties": {
@@ -4908,11 +4908,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -4920,13 +4920,13 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Path rule of URL path map of application gateway"
+      "description": "Path rule of URL path map of application gateway."
     },
     "ApplicationGatewayProbePropertiesFormat": {
       "properties": {
         "protocol": {
           "type": "string",
-          "description": "Protocol",
+          "description": "Protocol. Possible values: Http, or Https.",
           "enum": [
             "Http",
             "Https"
@@ -4938,33 +4938,33 @@
         },
         "host": {
           "type": "string",
-          "description": "Host to send probe to "
+          "description": "Host to send probe to."
         },
         "path": {
           "type": "string",
-          "description": "Relative path of probe "
+          "description": "Relative path of probe."
         },
         "interval": {
           "type": "integer",
           "format": "int32",
-          "description": "Probing interval in seconds "
+          "description": "Probing interval in seconds."
         },
         "timeout": {
           "type": "integer",
           "format": "int32",
-          "description": "Probing timeout in seconds "
+          "description": "Probing timeout in seconds."
         },
         "unhealthyThreshold": {
           "type": "integer",
           "format": "int32",
-          "description": "Probing unhealthy threshold "
+          "description": "Probing unhealthy threshold."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the backend http settings resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the backend http settings resource. Possible values: Updating, Deleting, or Failed."
         }
       },
-      "description": "Properties of probe of application gateway"
+      "description": "Properties of a probe of application gateway."
     },
     "ApplicationGatewayProbe": {
       "properties": {
@@ -4974,11 +4974,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -4992,7 +4992,7 @@
       "properties": {
         "ruleType": {
           "type": "string",
-          "description": "Rule type",
+          "description": "Rule type. Possible values: Basic, or PathBasedRouting.",
           "enum": [
             "Basic",
             "PathBasedRouting"
@@ -5004,26 +5004,26 @@
         },
         "backendAddressPool": {
           "$ref": "#/definitions/SubResource",
-          "description": "Backend address pool resource of application gateway "
+          "description": "Backend address pool resource of application gateway."
         },
         "backendHttpSettings": {
           "$ref": "#/definitions/SubResource",
-          "description": "Frontend port resource of application gateway "
+          "description": "Frontend port resource of application gateway."
         },
         "httpListener": {
           "$ref": "#/definitions/SubResource",
-          "description": "Http listener resource of application gateway "
+          "description": "HTTP listener resource of application gateway."
         },
         "urlPathMap": {
           "$ref": "#/definitions/SubResource",
-          "description": "Url path map resource of application gateway "
+          "description": "URL path map resource of application gateway."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the request routing rule resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the request routing rule resource. Possible values: Updating, Deleting, or Failed."
         }
       },
-      "description": "Properties of Request routing rule of application gateway"
+      "description": "Properties of Request routing rule of application gateway."
     },
     "ApplicationGatewayRequestRoutingRule": {
       "properties": {
@@ -5033,11 +5033,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -5045,22 +5045,22 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Request routing rule of application gateway"
+      "description": "Request routing rule of application gateway."
     },
     "ApplicationGatewayPropertiesFormat": {
       "properties": {
         "sku": {
           "$ref": "#/definitions/ApplicationGatewaySku",
-          "description": "Sku of application gateway resource"
+          "description": "SKU of application gateway resource."
         },
         "sslPolicy": {
           "$ref": "#/definitions/ApplicationGatewaySslPolicy",
-          "description": "SSL policy of application gateway resource"
+          "description": "SSL policy of application gateway resource."
         },
         "operationalState": {
           "readOnly": true,
           "type": "string",
-          "description": "Operational state of application gateway resource",
+          "description": "Operational state of application gateway resource. Possible values: Stopped, Starting, Running, or Stopping.",
           "enum": [
             "Stopped",
             "Starting",
@@ -5077,89 +5077,89 @@
           "items": {
             "$ref": "#/definitions/ApplicationGatewayIPConfiguration"
           },
-          "description": "Subnets of application gateway resource"
+          "description": "Subnets of application gateway resource."
         },
         "authenticationCertificates": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayAuthenticationCertificate"
           },
-          "description": "Authentication certificates of application gateway resource"
+          "description": "Authentication certificates of application gateway resource."
         },
         "sslCertificates": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewaySslCertificate"
           },
-          "description": "SSL certificates of application gateway resource"
+          "description": "SSL certificates of application gateway resource."
         },
         "frontendIPConfigurations": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayFrontendIPConfiguration"
           },
-          "description": "Frontend IP addresses of application gateway resource"
+          "description": "Frontend IP addresses of application gateway resource."
         },
         "frontendPorts": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayFrontendPort"
           },
-          "description": "Frontend ports of application gateway resource"
+          "description": "Frontend ports of application gateway resource."
         },
         "probes": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayProbe"
           },
-          "description": "Probes of application gateway resource"
+          "description": "Probes of application gateway resource."
         },
         "backendAddressPools": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayBackendAddressPool"
           },
-          "description": "Backend address pool of application gateway resource"
+          "description": "Backend address pool of application gateway resource."
         },
         "backendHttpSettingsCollection": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayBackendHttpSettings"
           },
-          "description": "Backend http settings of application gateway resource"
+          "description": "Backend HTTP settings of application gateway resource."
         },
         "httpListeners": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayHttpListener"
           },
-          "description": "HTTP listeners of application gateway resource"
+          "description": "HTTP listeners of application gateway resource."
         },
         "urlPathMaps": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayUrlPathMap"
           },
-          "description": "URL path map of application gateway resource"
+          "description": "URL path map of application gateway resource."
         },
         "requestRoutingRules": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayRequestRoutingRule"
           },
-          "description": "Request routing rules of application gateway resource"
+          "description": "Request routing rules of application gateway resource."
         },
         "webApplicationFirewallConfiguration": {
           "$ref": "#/definitions/ApplicationGatewayWebApplicationFirewallConfiguration",
-          "description": "Web application firewall configuration"
+          "description": "Web application firewall configuration."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Resource guid property of the ApplicationGateway resource"
+          "description": "Resource guid property of the ApplicationGateway resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the ApplicationGateway resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the ApplicationGateway resource. Possible values: Updating, Deleting, or Failed."
         }
       },
       "description": "Properties of Application Gateway"
@@ -5172,7 +5172,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -5189,38 +5189,38 @@
           "items": {
             "$ref": "#/definitions/ApplicationGateway"
           },
-          "description": "List of ApplicationGateways in a resource group"
+          "description": "List of application gateways in a resource group."
         },
         "nextLink": {
           "type": "string",
           "description": "URL to get the next set of results."
         }
       },
-      "description": "Response for ListApplicationGateways Api service call"
+      "description": "Response for ListApplicationGateways API service call."
     },
     "ApplicationGatewayUrlPathMapPropertiesFormat": {
       "properties": {
         "defaultBackendAddressPool": {
           "$ref": "#/definitions/SubResource",
-          "description": "Default backend address pool resource of URL path map "
+          "description": "Default backend address pool resource of URL path map."
         },
         "defaultBackendHttpSettings": {
           "$ref": "#/definitions/SubResource",
-          "description": "Default backend http settings resource of URL path map "
+          "description": "Default backend HTTP settings resource of URL path map."
         },
         "pathRules": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ApplicationGatewayPathRule"
           },
-          "description": "Path rule of URL path map resource"
+          "description": "Path rule of URL path map resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the backend http settings resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the backend http settings resource. Possible values: Updating, Deleting, or Failed."
         }
       },
-      "description": "Properties of UrlPathMap of application gateway"
+      "description": "Properties of UrlPathMap of application gateway."
     },
     "ApplicationGatewayUrlPathMap": {
       "properties": {
@@ -5230,11 +5230,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -5252,7 +5252,7 @@
         },
         "firewallMode": {
           "type": "string",
-          "description": "Web application firewall mode",
+          "description": "Web application firewall mode. Possible values: Detection, or Prevention.",
           "enum": [
             "Detection",
             "Prevention"
@@ -5276,7 +5276,7 @@
         },
         "authorizationUseStatus": {
           "type": "string",
-          "description": "Gets or sets AuthorizationUseStatus",
+          "description": "Gets or sets AuthorizationUseStatus. Possible values: Available, or InUse.",
           "enum": [
             "Available",
             "InUse"
@@ -5288,7 +5288,7 @@
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets provisioning state of the PublicIP resource. Possible values: Updating, Deleting, or Failed."
         }
       }
     },
@@ -5341,7 +5341,7 @@
         },
         "advertisedPublicPrefixesState": {
           "type": "string",
-          "description": "Gets or sets AdvertisedPublicPrefixState of the Peering resource ",
+          "description": "Gets or sets AdvertisedPublicPrefixState of the Peering resource. Possible values: NotConfigured, Configuring, Configured, or ValidationNeeded.",
           "enum": [
             "NotConfigured",
             "Configuring",
@@ -5394,7 +5394,7 @@
       "properties": {
         "peeringType": {
           "type": "string",
-          "description": "Gets or sets PeeringType",
+          "description": "Gets or sets PeeringType. Possible values: AzurePublicPeering, AzurePrivatePeering, or MicrosoftPeering.",
           "enum": [
             "AzurePublicPeering",
             "AzurePrivatePeering",
@@ -7370,17 +7370,17 @@
           "description": "Gets the URL to get the next set of results."
         }
       },
-      "description": "Response for ListSecurityRule Api service callRetrieves all security rules that belongs to a network security group"
+      "description": "Response for ListSecurityRule API service callRetrieves all security rules that belongs to a network security group."
     },
     "IPConfigurationPropertiesFormat": {
       "properties": {
         "privateIPAddress": {
           "type": "string",
-          "description": "Gets or sets the privateIPAddress of the IP Configuration"
+          "description": "Gets or sets the privateIPAddress of the IP Configuration."
         },
         "privateIPAllocationMethod": {
           "type": "string",
-          "description": "Gets or sets PrivateIP allocation method",
+          "description": "Gets or sets PrivateIP allocation method.",
           "enum": [
             "Static",
             "Dynamic"
@@ -7392,18 +7392,18 @@
         },
         "subnet": {
           "$ref": "#/definitions/Subnet",
-          "description": "Gets or sets the reference of the subnet resource"
+          "description": "Gets or sets the reference of the subnet resource."
         },
         "publicIPAddress": {
           "$ref": "#/definitions/PublicIPAddress",
-          "description": "Gets or sets the reference of the PublicIP resource"
+          "description": "Gets or sets the reference of the PublicIP resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets provisioning state of the PublicIP resource (Updating, Deleting, or Failed)"
         }
       },
-      "description": "Properties of IPConfiguration"
+      "description": "Properties of IPConfiguration."
     },
     "IPConfiguration": {
       "properties": {
@@ -7413,11 +7413,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -7431,16 +7431,16 @@
       "properties": {
         "linkedResourceType": {
           "type": "string",
-          "description": "Resource type of the linked resource"
+          "description": "Resource type of the linked resource."
         },
         "link": {
           "type": "string",
-          "description": "Link to the external resource"
+          "description": "Link to the external resource."
         },
         "provisioningState": {
           "readOnly": true,
           "type": "string",
-          "description": "Provisioning state of the ResourceNavigationLink resource"
+          "description": "Provisioning state of the ResourceNavigationLink resource."
         }
       },
       "description": "Properties of ResourceNavigationLink"
@@ -7453,12 +7453,12 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "readOnly": true,
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -7476,11 +7476,11 @@
         },
         "networkSecurityGroup": {
           "$ref": "#/definitions/NetworkSecurityGroup",
-          "description": "Gets or sets the reference of the NetworkSecurityGroup resource"
+          "description": "Gets or sets the reference of the NetworkSecurityGroup resource."
         },
         "routeTable": {
           "$ref": "#/definitions/RouteTable",
-          "description": "Gets or sets the reference of the RouteTable resource"
+          "description": "Gets or sets the reference of the RouteTable resource."
         },
         "ipConfigurations": {
           "readOnly": true,
@@ -7488,18 +7488,18 @@
           "items": {
             "$ref": "#/definitions/IPConfiguration"
           },
-          "description": "Gets array of references to the network interface IP configurations using subnet"
+          "description": "Gets array of references to the network interface IP configurations using subnet."
         },
         "resourceNavigationLinks": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ResourceNavigationLink"
           },
-          "description": "Gets array of references to the external resources using subnet"
+          "description": "Gets array of references to the external resources using subnet."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the resource"
+          "description": "Gets provisioning state of the resource."
         }
       }
     },
@@ -7507,15 +7507,15 @@
       "properties": {
         "allowVirtualNetworkAccess": {
           "type": "boolean",
-          "description": "Gets or sets whether the VMs in the linked virtual network space would be able to access all the VMs in local Virtual network space"
+          "description": "Gets or sets whether the VMs in the linked virtual network space would be able to access all the VMs in local Virtual network space."
         },
         "allowForwardedTraffic": {
           "type": "boolean",
-          "description": "Gets or sets whether the forwarded traffic from the VMs in the remote virtual network will be allowed/disallowed"
+          "description": "Gets or sets whether the forwarded traffic from the VMs in the remote virtual network will be allowed/disallowed."
         },
         "allowGatewayTransit": {
           "type": "boolean",
-          "description": "Gets or sets if gatewayLinks can be used in remote virtual networkï¿½s link to this virtual network"
+          "description": "Gets or sets if gatewayLinks can be used in remote virtual networks link to this virtual network."
         },
         "useRemoteGateways": {
           "type": "boolean",
@@ -7523,11 +7523,11 @@
         },
         "remoteVirtualNetwork": {
           "$ref": "#/definitions/SubResource",
-          "description": "Gets or sets the reference of the remote virtual network"
+          "description": "Gets or sets the reference of the remote virtual network."
         },
         "peeringState": {
           "type": "string",
-          "description": "Gets the status of the virtual network peering",
+          "description": "Gets the status of the virtual network peering.",
           "enum": [
             "Initiated",
             "Connected",
@@ -7540,7 +7540,7 @@
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the resource"
+          "description": "Gets provisioning state of the resource."
         }
       }
     },
@@ -7552,11 +7552,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets or sets the name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets or sets the name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -7564,7 +7564,7 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Subnet in a VirtualNework resource"
+      "description": "Subnet in a VirtualNework resource."
     },
     "VirtualNetworkPeering": {
       "properties": {
@@ -7574,11 +7574,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets or sets the name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets or sets the name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -7586,7 +7586,7 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "Peerings in a VirtualNework resource"
+      "description": "Peerings in a VirtualNework resource."
     },
     "SubnetListResult": {
       "properties": {
@@ -7595,14 +7595,14 @@
           "items": {
             "$ref": "#/definitions/Subnet"
           },
-          "description": "Gets the subnets in a virtual network"
+          "description": "Gets the subnets in a virtual network."
         },
         "nextLink": {
           "type": "string",
           "description": "Gets the URL to get the next set of results."
         }
       },
-      "description": "Response for ListSubnets Api service callRetrieves all subnet that belongs to a virtual network"
+      "description": "Response for ListSubnets API service callRetrieves all subnet that belongs to a virtual network."
     },
     "VirtualNetworkPeeringListResult": {
       "properties": {
@@ -7618,7 +7618,7 @@
           "description": "Gets the URL to get the next set of results."
         }
       },
-      "description": "Response for ListSubnets Api service callRetrieves all subnet that belongs to a virtual network"
+      "description": "Response for ListSubnets API service callRetrieves all subnet that belongs to a virtual network."
     },
     "UsageName": {
       "properties": {
@@ -7689,7 +7689,7 @@
       "properties": {
         "privateIPAllocationMethod": {
           "type": "string",
-          "description": "Gets or sets PrivateIP allocation method",
+          "description": "Gets or sets PrivateIP allocation method.",
           "enum": [
             "Static",
             "Dynamic"
@@ -7701,15 +7701,15 @@
         },
         "subnet": {
           "$ref": "#/definitions/SubResource",
-          "description": "Gets or sets the reference of the subnet resource"
+          "description": "Gets or sets the reference of the subnet resource."
         },
         "publicIPAddress": {
           "$ref": "#/definitions/SubResource",
-          "description": "Gets or sets the reference of the PublicIP resource"
+          "description": "Gets or sets the reference of the PublicIP resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets provisioning state of the PublicIP resource (Updating, Deleting, or Failed)."
         }
       },
       "description": "Properties of VirtualNetworkGatewayIPConfiguration"
@@ -7722,11 +7722,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -7734,7 +7734,7 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "IpConfiguration for Virtual network gateway"
+      "description": "IPConfiguration for Virtual network gateway"
     },
     "VirtualNetworkGatewayPropertiesFormat": {
       "properties": {
@@ -7743,7 +7743,7 @@
           "items": {
             "$ref": "#/definitions/VirtualNetworkGatewayIPConfiguration"
           },
-          "description": "IpConfigurations for Virtual network gateway."
+          "description": "IPConfigurations for Virtual network gateway."
         },
         "gatewayType": {
           "type": "string",
@@ -7771,11 +7771,11 @@
         },
         "enableBgp": {
           "type": "boolean",
-          "description": "EnableBgp Flag"
+          "description": "EnableBgp Flag."
         },
 	"activeActive": {
           "type": "boolean",
-          "description": "ActiveActive flag"
+          "description": "ActiveActive flag."
         },
         "gatewayDefaultSite": {
           "$ref": "#/definitions/SubResource",
@@ -7791,15 +7791,15 @@
         },
         "bgpSettings": {
           "$ref": "#/definitions/BgpSettings",
-          "description": "Virtual network gateway's BGP speaker settings"
+          "description": "Virtual network gateway's BGP speaker settings."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the VirtualNetworkGateway resource"
+          "description": "Gets or sets resource guid property of the VirtualNetworkGateway resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the VirtualNetworkGateway resource Updating/Deleting/Failed"
+          "description": "Gets provisioning state of the VirtualNetworkGateway resource (Updating, Deleting, or Failed)."
         }
       },
       "description": "VirtualNetworkGateway properties"
@@ -7812,7 +7812,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -7849,7 +7849,7 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "Gateway sku name -Basic/HighPerformance/Standard/UltraPerformance",
+          "description": "Gateway sku name (Basic, HighPerformance, Standard, or UltraPerformance).",
           "enum": [
             "Basic",
             "HighPerformance",
@@ -7863,7 +7863,7 @@
         },
         "tier": {
           "type": "string",
-          "description": "Gateway sku tier -Basic/HighPerformance/Standard/UltraPerformance",
+          "description": "Gateway sku tier (Basic, HighPerformance, Standard, or UltraPerformance).",
           "enum": [
             "Basic",
             "HighPerformance",
@@ -7881,13 +7881,13 @@
           "description": "The capacity"
         }
       },
-      "description": "VirtualNetworkGatewaySku details"
+      "description": "VirtualNetworkGatewaySku details."
     },
     "VpnClientParameters": {
       "properties": {
         "ProcessorArchitecture": {
           "type": "string",
-          "description": "VPN client Processor Architecture -Amd64/X86",
+          "description": "VPN client Processor Architecture (Amd64, or X86).",
           "enum": [
             "Amd64",
             "X86"
@@ -7917,7 +7917,7 @@
         },
         "connectionType": {
           "type": "string",
-          "description": "Gateway connection type -Ipsec/Dedicated/VpnClient/Vnet2Vnet",
+          "description": "Gateway connection type (IPsec, Dedicated, VpnClient, or Vnet2Vnet).",
           "enum": [
             "IPsec",
             "Vnet2Vnet",
@@ -7940,7 +7940,7 @@
         },
         "connectionStatus": {
           "type": "string",
-          "description": "Virtual network Gateway connection status",
+          "description": "Virtual network Gateway connection status.",
           "enum": [
             "Unknown",
             "Connecting",
@@ -7955,12 +7955,12 @@
         "egressBytesTransferred": {
           "type": "integer",
           "format": "int64",
-          "description": "The Egress Bytes Transferred in this connection"
+          "description": "The Egress Bytes Transferred in this connection."
         },
         "ingressBytesTransferred": {
           "type": "integer",
           "format": "int64",
-          "description": "The Ingress Bytes Transferred in this connection"
+          "description": "The Ingress Bytes Transferred in this connection."
         },
         "peer": {
           "$ref": "#/definitions/SubResource",
@@ -7972,14 +7972,14 @@
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the VirtualNetworkGatewayConnection resource"
+          "description": "Gets or sets resource guid property of the VirtualNetworkGatewayConnection resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the VirtualNetworkGatewayConnection resource Updating/Deleting/Failed"
+          "description": "Gets provisioning state of the VirtualNetworkGatewayConnection resource Updating/Deleting/Failed."
         }
       },
-      "description": "VirtualNetworkGatewayConnection properties"
+      "description": "VirtualNetworkGatewayConnection properties."
     },
     "VirtualNetworkGatewayConnection": {
       "properties": {
@@ -7989,7 +7989,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -7997,20 +7997,20 @@
           "$ref": "#/definitions/Resource"
         }
       ],
-      "description": "A common class for general resource information"
+      "description": "A common class for general resource information."
     },
     "VpnClientRevokedCertificatePropertiesFormat": {
       "properties": {
         "thumbprint": {
           "type": "string",
-          "description": "Gets or sets the revoked Vpn client certificate thumbprint"
+          "description": "Gets or sets the revoked Vpn client certificate thumbprint."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the VPN client revoked certificate resource Updating/Deleting/Failed"
+          "description": "Gets provisioning state of the VPN client revoked certificate resource Updating/Deleting/Failed."
         }
       },
-      "description": "Properties of the revoked VPN client certificate of virtual network gateway"
+      "description": "Properties of the revoked VPN client certificate of virtual network gateway."
     },
     "VpnClientRevokedCertificate": {
       "properties": {
@@ -8020,11 +8020,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -8032,20 +8032,20 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "VPN client revoked certificate of virtual network gateway"
+      "description": "VPN client revoked certificate of virtual network gateway."
     },
     "VpnClientRootCertificatePropertiesFormat": {
       "properties": {
         "publicCertData": {
           "type": "string",
-          "description": "Gets or sets the certificate public data"
+          "description": "Gets or sets the certificate public data."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the VPN client root certificate resource Updating/Deleting/Failed"
+          "description": "Gets provisioning state of the VPN client root certificate resource Updating/Deleting/Failed."
         }
       },
-      "description": "Properties of SSL certificates of application gateway"
+      "description": "Properties of SSL certificates of application gateway."
     },
     "VpnClientRootCertificate": {
       "properties": {
@@ -8055,11 +8055,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -8067,16 +8067,16 @@
           "$ref": "#/definitions/SubResource"
         }
       ],
-      "description": "VPN client root certificate of virtual network gateway"
+      "description": "VPN client root certificate of virtual network gateway."
     },
     "ConnectionSharedKeyResult": {
       "properties": {
         "value": {
           "type": "string",
-          "description": "The virtual network connection shared key value"
+          "description": "The virtual network connection shared key value."
         }
       },
-      "description": "Response for CheckConnectionSharedKey Api service call"
+      "description": "Response for CheckConnectionSharedKey API service call."
     },
     "VirtualNetworkGatewayConnectionListResult": {
       "properties": {
@@ -8085,21 +8085,21 @@
           "items": {
             "$ref": "#/definitions/VirtualNetworkGatewayConnection"
           },
-          "description": "Gets List of VirtualNetworkGatewayConnections that exists in a resource group"
+          "description": "Gets List of VirtualNetworkGatewayConnections that exists in a resource group."
         },
         "nextLink": {
           "type": "string",
           "description": "Gets the URL to get the next set of results."
         }
       },
-      "description": "Response for ListVirtualNetworkGatewayConnections Api service call"
+      "description": "Response for ListVirtualNetworkGatewayConnections API service call."
     },
     "ConnectionResetSharedKey": {
       "properties": {
         "keyLength": {
           "type": "integer",
           "format": "int64",
-          "description": "The virtual network connection reset shared key length"
+          "description": "The virtual network connection reset shared key length."
         }
       }
     },
@@ -8107,10 +8107,10 @@
       "properties": {
         "value": {
           "type": "string",
-          "description": "The virtual network connection shared key value"
+          "description": "The virtual network connection shared key value."
         }
       },
-      "description": "Response for GetConnectionSharedKey Api service call"
+      "description": "Response for GetConnectionSharedKey API service call."
     },
     "VirtualNetworkGatewayListResult": {
       "properties": {
@@ -8119,14 +8119,14 @@
           "items": {
             "$ref": "#/definitions/VirtualNetworkGateway"
           },
-          "description": "Gets List of VirtualNetworkGateways that exists in a resource group"
+          "description": "Gets List of VirtualNetworkGateways that exists in a resource group."
         },
         "nextLink": {
           "type": "string",
           "description": "Gets the URL to get the next set of results."
         }
       },
-      "description": "Response for ListVirtualNetworkGateways Api service call"
+      "description": "Response for ListVirtualNetworkGateways API service call."
     },
     "DhcpOptions": {
       "properties": {
@@ -8144,33 +8144,33 @@
       "properties": {
         "addressSpace": {
           "$ref": "#/definitions/AddressSpace",
-          "description": "Gets or sets AddressSpace that contains an array of IP address ranges that can be used by subnets"
+          "description": "Gets or sets AddressSpace that contains an array of IP address ranges that can be used by subnets."
         },
         "dhcpOptions": {
           "$ref": "#/definitions/DhcpOptions",
-          "description": "Gets or sets DHCPOptions that contains an array of DNS servers available to VMs deployed in the virtual network"
+          "description": "Gets or sets DHCPOptions that contains an array of DNS servers available to VMs deployed in the virtual network."
         },
         "subnets": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Subnet"
           },
-          "description": "Gets or sets list of subnets in a VirtualNetwork"
+          "description": "Gets or sets list of subnets in a VirtualNetwork."
         },
         "VirtualNetworkPeerings": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/VirtualNetworkPeering"
           },
-          "description": "Gets or sets list of peerings in a VirtualNetwork"
+          "description": "Gets or sets list of peerings in a VirtualNetwork."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the VirtualNetwork resource"
+          "description": "Gets or sets resource guid property of the VirtualNetwork resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed."
         }
       }
     },
@@ -8182,7 +8182,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         }
       },
       "allOf": [
@@ -8199,14 +8199,14 @@
           "items": {
             "$ref": "#/definitions/VirtualNetwork"
           },
-          "description": "Gets list of VirtualNetworks in a resource group"
+          "description": "Gets list of VirtualNetworks in a resource group."
         },
         "nextLink": {
           "type": "string",
           "description": "Gets the URL to get the next set of results."
         }
       },
-      "description": "Response for ListVirtualNetworks Api service call"
+      "description": "Response for ListVirtualNetworks API service call."
     },
     "DnsNameAvailabilityResult": {
       "properties": {
@@ -8215,7 +8215,7 @@
           "description": "Domain availability (True/False)"
         }
       },
-      "description": "Response for CheckDnsNameAvailability Api service call"
+      "description": "Response for CheckDnsNameAvailability API service call."
     },
     "IPAddressAvailabilityResult": {
       "properties": {
@@ -8228,10 +8228,10 @@
           "items": {
             "type": "string"
           },
-          "description": "Contains other available private IP addresses if the asked for address is taken"
+          "description": "Contains other available private IP addresses if the asked for address is taken."
         }
       },
-      "description": "Response for CheckIPAddressAvailability Api service call"
+      "description": "Response for CheckIPAddressAvailability API service call."
     },
     "ErrorDetails": {
       "properties": {
@@ -8293,7 +8293,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID"
         },
         "name": {
           "readOnly": true,
@@ -8323,7 +8323,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID"
         }
       },
       "x-ms-azure-resource": true
@@ -8342,7 +8342,7 @@
       "in": "query",
       "required": true,
       "type": "string",
-      "description": "Client Api Version."
+      "description": "Client API Version."
     }
   }
 }
