@@ -60,7 +60,7 @@
             "schema": {
               "$ref": "#/definitions/Endpoint"
             },
-            "description": "The Traffic Manager endpoint parameters supplied to the Update operation."
+            "description": "The Traffic Manager endpoint parameters supplied to the update operation."
           },
           {
             "$ref": "#/parameters/ApiVersionParameter"
@@ -182,13 +182,13 @@
         ],
         "responses": {
           "200": { 
-             "description": "The created or updated Endpoint.", 
+             "description": "The created or updated endpoint.", 
              "schema": { 
                "$ref": "#/definitions/Endpoint" 
              } 
           },
           "201": { 
-             "description": "The created or updated Endpoint.", 
+             "description": "The created or updated endpoint.", 
              "schema": { 
                "$ref": "#/definitions/Endpoint" 
              } 
@@ -253,7 +253,7 @@
           "Profiles"
         ],
         "operationId": "Profiles_CheckTrafficManagerRelativeDnsNameAvailability",
-        "description": "Checks the availability of a Traffic Manager Relative DNS name.",
+        "description": "Checks the availability of a Traffic Manager relative DNS name.",
         "parameters": [
           {
             "name": "parameters",
@@ -486,8 +486,7 @@
             "description": "The name of the resource group containing the Traffic Manager profile."
           },
           {
-            "name": "profileName",
-            "in": "path",
+            "name": "profileName",            "in": "path",
             "required": true,
             "type": "string",
             "description": "The name of the Traffic Manager profile."
@@ -499,7 +498,7 @@
             "schema": {
               "$ref": "#/definitions/Profile"
             },
-            "description": "The Traffic Manager profile parameters supplied to the Update operation."
+            "description": "The Traffic Manager profile parameters supplied to the update operation."
           },
           {
             "$ref": "#/parameters/ApiVersionParameter"
@@ -532,7 +531,7 @@
         },
         "endpointStatus": {
           "type": "string",
-          "description": "Gets or sets the status of the endpoint..  If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.  Possible values are 'Enabled' and 'Disabled'."
+          "description": "Gets or sets the status of the endpoint.  If the endpoint is enabled, it is probed for endpoint health and is included in the traffic routing method.  Possible values are 'Enabled' and 'Disabled'."
         },
         "weight": {
           "type": "integer",
@@ -542,7 +541,7 @@
         "priority": {
           "type": "integer",
           "format": "int64",
-          "description": "Gets or sets the priority of this endpoint when using the ‘Priority’ traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value."
+          "description": "Gets or sets the priority of this endpoint when using the ‘Priority’ traffic routing method. Possible values are from 1 to 1000; lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value."
         },
         "endpointLocation": {
           "type": "string",
@@ -602,12 +601,12 @@
         },
         "fqdn": {
           "type": "string",
-          "description": "Gets or sets the fully-qualified domain name (FQDN) of the Traffic Manager profile.  This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager."
+          "description": "Gets or sets the fully-qualified domain name (FQDN) of the Traffic Manager profile.  This is formed from the concatenation of the relative name with the DNS domain used by Azure Traffic Manager."
         },
         "ttl": {
           "type": "integer",
           "format": "int64",
-          "description": "Gets or sets the DNS Ttime-To-Live (TTL), in seconds.  This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile."
+          "description": "Gets or sets the DNS Time-To-Live (TTL) in seconds.  This tells the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile."
         }
       },
       "description": "Class containing DNS settings in a Traffic Manager profile."
@@ -718,7 +717,7 @@
         "id": {
           "readOnly": true,
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID"
         },
         "name": {
           "readOnly": true,
@@ -748,7 +747,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID"
         }
       },
       "x-ms-external": true
@@ -767,7 +766,7 @@
       "in": "query",
       "required": true,
       "type": "string",
-      "description": "Client Api Version."
+      "description": "Client API Version."
     }
   }
 }
