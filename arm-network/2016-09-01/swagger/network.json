@@ -67,7 +67,7 @@
         ],
         "responses": {
           "202": {
-            "description": "Request Accepted. Query returned operation for status."
+            "description": "Request accepted. Query returned operation for status."
           },
           "204": {
             "description": "Request successful."
@@ -266,7 +266,7 @@
             "description": "Request successful."
           },
           "202": {
-            "description": "Request Accepted. Query returned operation for status."
+            "description": "Request accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -306,7 +306,7 @@
             "description": "Request successful."
           },
           "202": {
-            "description": "Request Accepted. Query returned operation for status."
+            "description": "Request accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -400,7 +400,7 @@
         ],
         "responses": {
           "202": {
-            "description": "Request Accepted. Query returned operation for status."
+            "description": "Request accepted. Query returned operation for status."
           },
           "200": {
             "description": "Request successful."
@@ -599,7 +599,7 @@
             "description": "Request successful."
           },
           "202": {
-            "description": "Request Accepted. Query returned operation for status."
+            "description": "Request accepted. Query returned operation for status."
           },
           "204": {
             "description": "Request successful."
@@ -938,7 +938,7 @@
             }
           },
           "202": {
-            "description": "Request Accepted. Query returned operation for status."
+            "description": "Request accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -995,7 +995,7 @@
             }
           },
           "202": {
-            "description": "Request Accepted. Query returned operation for status."
+            "description": "Request accepted. Query returned operation for status."
           }
         },
         "x-ms-long-running-operation": true
@@ -4402,7 +4402,7 @@
         },	  
         "health": {
           "type": "string",
-          "description": "Health of backend server.",
+          "description": "Health of backend server. Possible values are: 'Unknown', 'Up', 'Down', and 'Partial'.",
           "enum": [
             "Unknown",
             "Up",
@@ -4421,7 +4421,7 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "Name of application gateway SKU",
+          "description": "Name of application gateway SKU. Possible values are: 'Standard_Small', 'Standard_Medium', 'Standard_Large', 'WAF_Medium', and 'WAF_Large'.",
           "enum": [
             "Standard_Small",
             "Standard_Medium",
@@ -4436,7 +4436,7 @@
         },
         "tier": {
           "type": "string",
-          "description": "Tier of application gateway.",
+          "description": "Tier of application gateway. Possible values are: 'Standard' and 'WAF'.",
           "enum": [
             "Standard",
             "WAF"
@@ -4458,7 +4458,7 @@
       "properties": {
         "disabledSslProtocols": {
           "type": "array",
-          "description": "SSL protocols to be disabled on application gateway.",
+          "description": "SSL protocols to be disabled on application gateway. Possible values are: 'TLSv1_0', 'TLSv1_1', and 'TLSv1_2'.",
           "items": {
             "type": "string",
             "enum": [
@@ -4596,7 +4596,7 @@
         },
         "privateIPAllocationMethod": {
           "type": "string",
-          "description": "PrivateIP allocation method (Static/Dynamic).",
+          "description": "PrivateIP allocation method. Possible values are: 'Static' and 'Dynamic'.",
           "enum": [
             "Static",
             "Dynamic"
@@ -4746,7 +4746,7 @@
         },
         "protocol": {
           "type": "string",
-          "description": "Protocol",
+          "description": "Protocol. Possible values are: 'Http' and 'Https'.",
           "enum": [
             "Http",
             "Https"
@@ -4758,7 +4758,7 @@
         },
         "cookieBasedAffinity": {
           "type": "string",
-          "description": "Cookie affinity",
+          "description": "Cookie affinity. Possible values are: 'Enabled' and 'Disabled'.",
           "enum": [
             "Enabled",
             "Disabled"
@@ -4825,7 +4825,7 @@
         },
         "protocol": {
           "type": "string",
-          "description": "Protocol",
+          "description": "Protocol. Possible values are: 'Http' and 'Https'.",
           "enum": [
             "Http",
             "Https"
@@ -4926,7 +4926,7 @@
       "properties": {
         "protocol": {
           "type": "string",
-          "description": "Protocol",
+          "description": "Protocol. Possible values are: 'Http' and 'Https'.",
           "enum": [
             "Http",
             "Https"
@@ -4992,7 +4992,7 @@
       "properties": {
         "ruleType": {
           "type": "string",
-          "description": "Rule type",
+          "description": "Rule type. Possible values are: 'Basic' and 'PathBasedRouting'.",
           "enum": [
             "Basic",
             "PathBasedRouting"
@@ -5060,7 +5060,7 @@
         "operationalState": {
           "readOnly": true,
           "type": "string",
-          "description": "Operational state of the application gateway resource.",
+          "description": "Operational state of the application gateway resource. Possible values are: 'Stopped', 'Started', 'Running', and 'Stopping'.",
           "enum": [
             "Stopped",
             "Starting",
@@ -5252,7 +5252,7 @@
         },
         "firewallMode": {
           "type": "string",
-          "description": "Web application firewall mode.",
+          "description": "Web application firewall mode. Possible values are: 'Detection' and 'Prevention'.",
           "enum": [
             "Detection",
             "Prevention"
@@ -5276,7 +5276,7 @@
         },
         "authorizationUseStatus": {
           "type": "string",
-          "description": "Gets or sets AuthorizationUseStatus.",
+          "description": "Gets or sets AuthorizationUseStatus. Possible values are: 'Available' and 'InUse'.",
           "enum": [
             "Available",
             "InUse"
@@ -5341,7 +5341,7 @@
         },
         "advertisedPublicPrefixesState": {
           "type": "string",
-          "description": "Gets or sets AdvertisedPublicPrefixState of the Peering resource.",
+          "description": "Gets or sets AdvertisedPublicPrefixState of the Peering resource. Possible values are 'NotConfigured', 'Configuring', 'COnfigured', and 'ValidationNeeded'.",
           "enum": [
             "NotConfigured",
             "Configuring",
@@ -5394,7 +5394,7 @@
       "properties": {
         "peeringType": {
           "type": "string",
-          "description": "Gets or sets PeeringType.",
+          "description": "Gets or sets PeeringType. Possible values are: 'AzurePublicPeering', 'AzurePrivatePeering', and 'MicrosoftPeering'.",
           "enum": [
             "AzurePublicPeering",
             "AzurePrivatePeering",
@@ -5407,7 +5407,7 @@
         },
         "state": {
           "type": "string",
-          "description": "Gets or sets state of peering.",
+          "description": "Gets or sets state of peering. Possible values are: 'Disabled' and 'Enbaled'",
           "enum": [
             "Disabled",
             "Enabled"
@@ -5520,7 +5520,7 @@
         },
         "tier": {
           "type": "string",
-          "description": "Gets or sets tier of the SKU.",
+          "description": "Gets or sets tier of the SKU. Possible values are 'Standard' and 'Premium'.",
           "enum": [
             "Standard",
             "Premium"
@@ -5532,7 +5532,7 @@
         },
         "family": {
           "type": "string",
-          "description": "Gets or sets family of the SKU.",
+          "description": "Gets or sets family of the SKU. Possible values are: 'UnlimitedData' and 'MeteredData'.",
           "enum": [
             "UnlimitedData",
             "MeteredData"
@@ -5575,7 +5575,7 @@
         },
         "serviceProviderProvisioningState": {
           "type": "string",
-          "description": "Gets or sets ServiceProviderProvisioningState state of the resource.",
+          "description": "Gets or sets ServiceProviderProvisioningState state of the resource. Possible values are 'NotProvisioned', 'Provisioning', 'Provisioned', and 'Deprovisioning'.",
           "enum": [
             "NotProvisioned",
             "Provisioning",
@@ -5898,7 +5898,7 @@
         },
         "privateIPAllocationMethod": {
           "type": "string",
-          "description": "Gets or sets Private IP allocation method.",
+          "description": "Gets or sets Private IP allocation method. Possible values are: 'Static' and 'Dynamic'.",
           "enum": [
             "Static",
             "Dynamic"
@@ -6025,7 +6025,7 @@
         },
         "loadDistribution": {
           "type": "string",
-          "description": "Gets or sets the load distribution policy for this rule.",
+          "description": "Gets or sets the load distribution policy for this rule. Possible values are 'Default', 'SourceIP', and 'SourceIPProtocol'.",
           "enum": [
             "Default",
             "SourceIP",
@@ -6100,7 +6100,7 @@
         },
         "protocol": {
           "type": "string",
-          "description": "Gets or sets the protocol of the end point. Possible values are Http or Tcp. If Tcp is specified, a received ACK is required for the probe to be successful. If Http is specified, a 200 OK response from the specifies URI is required for the probe to be successful.",
+          "description": "Gets or sets the protocol of the end point. Possible values are: 'Http' or 'Tcp'. If Tcp is specified, a received ACK is required for the probe to be successful. If Http is specified, a 200 OK response from the specifies URI is required for the probe to be successful.",
           "enum": [
             "Http",
             "Tcp"
@@ -6174,7 +6174,7 @@
         },
         "protocol": {
           "type": "string",
-          "description": "Gets or sets the transport protocol for the endpoint. Possible values are Udp or Tcp",
+          "description": "Gets or sets the transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'",
           "enum": [
             "Udp",
             "Tcp"
@@ -6240,7 +6240,7 @@
         },
         "protocol": {
           "type": "string",
-          "description": "Gets or sets the transport protocol for the endpoint. Possible values are Udp or Tcp.",
+          "description": "Gets or sets the transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'.",
           "enum": [
             "Udp",
             "Tcp"
@@ -6563,7 +6563,7 @@
         },
         "privateIPAllocationMethod": {
           "type": "string",
-          "description": "Gets or sets private IP allocation method.",
+          "description": "Gets or sets private IP allocation method. Possible values are: 'Static' and 'Dynamic'.",
           "enum": [
             "Static",
             "Dynamic"
@@ -6575,7 +6575,7 @@
         },
         "privateIPAddressVersion": {
           "type": "string",
-          "description": "Gets or sets private IP address version (IPv4/IPv6).",
+          "description": "Gets or sets private IP address version. Possible values are: 'IPv4' and 'IPv6'.",
           "enum": [
             "IPv4",
             "IPv6"
@@ -6773,7 +6773,7 @@
         },
         "access": {
           "type": "string",
-          "description": "Gets or sets network traffic is allowed or denied. Possible values are 'Allow' and 'Deny'.",
+          "description": "Gets or sets network traffic is allowed or denied. Possible values are: 'Allow' and 'Deny'.",
           "enum": [
             "Allow",
             "Deny"
@@ -6790,7 +6790,7 @@
         },
         "direction": {
           "type": "string",
-          "description": "Gets or sets the direction of the rule.InBound or Outbound. The direction specifies if rule will be evaluated on incoming or outcoming traffic.",
+          "description": "Gets or sets the direction of the rule. The direction specifies if rule will be evaluated on incoming or outcoming traffic. Possible values are: 'Inbound' and 'Outbound'.",
           "enum": [
             "Inbound",
             "Outbound"
@@ -7062,7 +7062,7 @@
       "properties": {
         "publicIPAllocationMethod": {
           "type": "string",
-          "description": "Gets or sets PublicIP allocation method (Static/Dynamic).",
+          "description": "Gets or sets PublicIP allocation method. Possible values are: 'Static' and 'Dynamic'.",
           "enum": [
             "Static",
             "Dynamic"
@@ -7074,7 +7074,7 @@
         },
         "publicIPAddressVersion": {
           "type": "string",
-          "description": "Gets or sets the public IP address version (IPv4/IPv6).",
+          "description": "Gets or sets the public IP address version. Possible values are: 'IPv4' and 'IPv6'.",
           "enum": [
             "IPv4",
             "IPv6"
@@ -7153,7 +7153,7 @@
         },
         "nextHopType": {
           "type": "string",
-          "description": "Gets or sets the type of Azure hop the packet should be sent to.",
+          "description": "Gets or sets the type of Azure hop the packet should be sent to. Possible values are: 'VirtualNetworkGateway', 'VnetLocal', 'Internet', 'VirtualAppliance', and 'None'",
           "enum": [
             "VirtualNetworkGateway",
             "VnetLocal",
@@ -7188,7 +7188,7 @@
         },
         "source": {
           "type": "string",
-          "description": "Gets who created the route.",
+          "description": "Gets who created the route. Possible values are: 'Unknown', 'User', 'VirtualNetworkGateway', and 'Default'.",
           "enum": [
             "Unknown",
             "User",
@@ -7202,7 +7202,7 @@
         },
         "state": {
           "type": "string",
-          "description": "Gets value of effective route.",
+          "description": "Gets value of effective route. Possible values are: 'Active' and 'Invalid'.",
           "enum": [
             "Active",
             "Invalid"
@@ -7228,7 +7228,7 @@
         },
         "nextHopType": {
           "type": "string",
-          "description": "Gets or sets the type of Azure hop the packet should be sent to.",
+          "description": "Gets or sets the type of Azure hop the packet should be sent to. Possible values are: 'VirtualNetworkGateway', 'VnetLocal', 'Internet', 'VirtualAppliance', and 'None'.",
           "enum": [
             "VirtualNetworkGateway",
             "VnetLocal",
@@ -7380,7 +7380,7 @@
         },
         "privateIPAllocationMethod": {
           "type": "string",
-          "description": "Gets or sets private IP allocation method.",
+          "description": "Gets or sets private IP allocation method. Possible values are 'Static' and 'Dynamic'.",
           "enum": [
             "Static",
             "Dynamic"
@@ -7527,7 +7527,7 @@
         },
         "peeringState": {
           "type": "string",
-          "description": "Gets the status of the virtual network peering.",
+          "description": "Gets the status of the virtual network peering. Possible values are 'Initiated', 'Connected', and 'Disconnected'.",
           "enum": [
             "Initiated",
             "Connected",
@@ -7689,7 +7689,7 @@
       "properties": {
         "privateIPAllocationMethod": {
           "type": "string",
-          "description": "Gets or sets private IP allocation method.",
+          "description": "Gets or sets private IP allocation method. Possible values are: 'Static' and 'Dynamic'.",
           "enum": [
             "Static",
             "Dynamic"
@@ -7747,7 +7747,7 @@
         },
         "gatewayType": {
           "type": "string",
-          "description": "The type of this virtual network gateway.",
+          "description": "The type of this virtual network gateway. Possible values are: 'Vpn' and 'ExpressRoute'.",
           "enum": [
             "Vpn",
             "ExpressRoute"
@@ -7759,7 +7759,7 @@
         },
         "vpnType": {
           "type": "string",
-          "description": "The type of this virtual network gateway.",
+          "description": "The type of this virtual network gateway. Possible values are: 'PolicyBased' and 'RouteBased'.",
           "enum": [
             "PolicyBased",
             "RouteBased"
@@ -7849,7 +7849,7 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "Gateway SKU name -Basic/HighPerformance/Standard/UltraPerformance.",
+          "description": "Gateway SKU name. Possible values are: 'Basic', 'HighPerformance','Standard', and 'UltraPerformance'.",
           "enum": [
             "Basic",
             "HighPerformance",
@@ -7863,7 +7863,7 @@
         },
         "tier": {
           "type": "string",
-          "description": "Gateway SKU tier -Basic/HighPerformance/Standard/UltraPerformance.",
+          "description": "Gateway SKU tier. Possible values are: 'Basic', 'HighPerformance','Standard', and 'UltraPerformance'.",
           "enum": [
             "Basic",
             "HighPerformance",
@@ -7887,7 +7887,7 @@
       "properties": {
         "ProcessorArchitecture": {
           "type": "string",
-          "description": "VPN client Processor Architecture -AMD64/X86.",
+          "description": "VPN client Processor Architecture. Possible values are: 'AMD64' and 'X86'.",
           "enum": [
             "Amd64",
             "X86"
@@ -7917,7 +7917,7 @@
         },
         "connectionType": {
           "type": "string",
-          "description": "Gateway connection type - Ipsec/Dedicated/VpnClient/Vnet2Vnet.",
+          "description": "Gateway connection type. Possible values are: 'Ipsec','Vnet2Vnet','ExpressRoute', and 'VPNClient.",
           "enum": [
             "IPsec",
             "Vnet2Vnet",
@@ -7940,7 +7940,7 @@
         },
         "connectionStatus": {
           "type": "string",
-          "description": "Virtual network Gateway connection status.",
+          "description": "Virtual network Gateway connection status. Possible values are 'Unknown', 'Connecting', 'Connected' and 'NotConnected'.",
           "enum": [
             "Unknown",
             "Connecting",
@@ -8272,7 +8272,7 @@
       "properties": {
         "status": {
           "type": "string",
-          "description": "Status of the Azure async operation",
+          "description": "Status of the Azure async operation. Possible values are: 'InProgress', 'Succeeded', and 'Failed'.",
           "enum": [
             "InProgress",
             "Succeeded",
