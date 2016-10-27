@@ -35,7 +35,7 @@
       }
     }
   },
-  "paths": [{
+  "paths": {
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}": {
       "delete": {
         "tags": [
@@ -462,7 +462,7 @@
         "operationId": "ExpressRouteCircuitAuthorizations_CreateOrUpdate",
         "description": "Creates or updates an authorization in the specified express route circuit.",
         "parameters": [
-s          {
+          {
             "name": "resourceGroupName",
             "in": "path",
             "required": true,
@@ -4345,7 +4345,7 @@ s          },
         }
       }
     }
-  }],
+  },
   "definitions": {
     "ApplicationGatewayBackendHealth": {
       "properties": {
