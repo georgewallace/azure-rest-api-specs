@@ -4405,8 +4405,8 @@
           "description": "Health of backend server. Possible values are: 'Unknown', 'Up', 'Down', and 'Partial'.",
           "enum": [
             "Unknown",
-            "Up",
-            "Down",
+            "Healthy",
+            "Unhealthy",
             "Partial"
           ],
           "x-ms-enum": {
